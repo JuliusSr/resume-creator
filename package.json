@@ -1,0 +1,14 @@
+{
+  "name": "@resume-creator/root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "npx lerna bootstrap --hoist",
+    "clean": "bash ./scripts/clean.sh",
+    "transpile": "npx lerna run transpile",
+    "build": "bash ./scripts/build.sh",
+    "example": "npx lerna run start --stream --scope=@resume-creator/examples"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

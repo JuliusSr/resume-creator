@@ -1,0 +1,22 @@
+{
+  "name": "@resume-creator/renderer",
+  "version": "0.0.0",
+  "private": true,
+  "main": "build/index.js",
+  "scripts": {
+    "transpile": "babel src -d build"
+  },
+  "dependencies": {
+    "@resume-creator/resume": "0.0.0",
+    "@react-pdf/renderer": "^2.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
