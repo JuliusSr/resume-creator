@@ -12,11 +12,8 @@ const styles = StyleSheet.create({
 
 type TitleProps = {
   children: ReactNode;
-}
+};
 
-//TODO props
-//TODO implement
-//TODO conditional rendering
 const Title = (props: TitleProps) => (
   <Text style={styles.title}>
     {props.children}

@@ -66,7 +66,7 @@ const Resume = (props: ResumeProps) => {
             src={image}
           />
         }
-        <Contacts />
+        <Contacts {...personalData?.contacts} />
         <Languages />
       </View>
       <View style={styles.rightColumn} >
