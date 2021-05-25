@@ -5,10 +5,36 @@
     "bootstrap": "npx lerna bootstrap --hoist",
     "clean": "bash ./scripts/clean.sh",
     "transpile": "npx lerna run transpile",
+    "transpile-renderer": "npx lerna run transpile --scope=@resume-creator/renderer",
+    "transpile-resume": "npx lerna run transpile --scope=@resume-creator/resume",
+    "transpile-types": "npx lerna run transpile --scope=@resume-creator/types",
+    "clean-build": "bash ./scripts/clean-build.sh",
     "build": "bash ./scripts/build.sh",
-    "example": "npx lerna run start --stream --scope=@resume-creator/examples"
+    "example": "npx lerna run start --stream --scope=@resume-creator/examples",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "transpile-renderer": {
+      "patterns": ["packages/renderer/src"],
+      "extensions": "ts,tsx",
+      "runOnChangeOnly": true,
+      "quiet": false
+    }, 
+    "transpile-resume": {
+      "patterns": ["packages/resume/src"],
+      "extensions": "ts,tsx",
+      "runOnChangeOnly": true,
+      "quiet": false
+    },
+    "transpile-types": {
+      "patterns": ["packages/types/src"],
+      "extensions": "ts",
+      "runOnChangeOnly": true,
+      "quiet": false
+    }
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "npm-watch": "^0.9.0"
   }
 }
