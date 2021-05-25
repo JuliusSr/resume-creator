@@ -4,16 +4,21 @@
   "private": true,
   "main": "build/index.js",
   "scripts": {
-    "transpile": "babel src -d build"
+    "transpile": "babel src -d build --extensions '.ts,.tsx' && tsc"
   },
   "dependencies": {
     "@resume-creator/resume": "0.0.0",
+    "@resume-creator/types": "0.0.0",
     "@react-pdf/renderer": "^2.0.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@types/react": "^17.0.6",
+    "@types/react-dom": "^17.0.5",
+    "typescript": "^4.2.4"
   },
   "peerDependencies": {
     "react": "^16.8.6",
