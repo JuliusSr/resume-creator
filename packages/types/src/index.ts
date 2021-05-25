@@ -8,12 +8,12 @@ export type Contacts = {
   email?: string,
   phone?: string,
   address?: string,
-}
+};
 
 export type TimeFrame = {
   dateFrom: string, //TODO should be date
   dateTo?: string  //TODO should be date
-}
+};
 
 export interface Education extends TimeFrame {
   institute: string,
@@ -38,3 +38,5 @@ export type Resume = {
   experience?: Array<Experience>,
   languages?: Array<Language>
 };
+
+export type Locale = "en-US" | "it-IT";

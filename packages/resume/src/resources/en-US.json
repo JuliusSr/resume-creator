@@ -1,0 +1,17 @@
+{
+  "contacts": {
+    "title": "Contacts",
+    "phone": "phone",
+    "email": "email",
+    "address": "address"
+  },
+  "languages": {
+    "title": "Languages"
+  },
+  "education": {
+    "title": "Education"
+  },
+  "experience": {
+    "title": "Experience"
+  }
+}

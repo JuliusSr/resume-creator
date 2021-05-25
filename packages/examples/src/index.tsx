@@ -9,6 +9,9 @@ const MOUNT_ELEMENT = document.getElementById('root');
 const resumeData: ResumeProps = { ...resume };
 
 ReactDOM.render(
-  <ResumeViewer { ...resumeData } />, 
+  <ResumeViewer 
+    data={resumeData}
+    locale="en-US"
+  />, 
   MOUNT_ELEMENT
 );

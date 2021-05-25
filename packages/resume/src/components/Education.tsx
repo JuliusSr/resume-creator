@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
+import { getLabels } from '../utils/i18n';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,10 +11,13 @@ const styles = StyleSheet.create({
 //TODO props
 //TODO implement
 //TODO conditional rendering
-const Education = () => (
-  <View style={styles.container}>
-    <Text>Education</Text>
-  </View>
-);
+const Education = () => {
+  const labels = getLabels();
+  return (
+    <View style={styles.container}>
+      <Text>{labels.education.title}</Text>
+    </View>
+  );
+}
 
 export default Education;

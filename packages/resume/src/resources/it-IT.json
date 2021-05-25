@@ -1,0 +1,17 @@
+{
+  "contacts": {
+    "title": "Contatti",
+    "phone": "telefono",
+    "email": "email",
+    "address": "indirizzo"
+  },
+  "languages": {
+    "title": "Lingue"
+  },
+  "education": {
+    "title": "Istruzione"
+  },
+  "experience": {
+    "title": "Esperienza"
+  }
+}
