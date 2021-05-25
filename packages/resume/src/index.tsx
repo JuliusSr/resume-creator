@@ -4,7 +4,7 @@ import {
   Document,
 } from '@react-pdf/renderer';
 import { Resume as ResumeProps } from '@resume-creator/types';
-import Resume from './Resume';
+import Resume from './components/Resume';
 
 const ResumeDocument = (props: ResumeProps) => (
   <Document title="Resume" >

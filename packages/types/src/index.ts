@@ -1,10 +1,14 @@
 export type PersonalData = {
   name: string,
-  role: string,
-  email: string,
+  role?: string,
+  contacts?: Contacts,
+};
+
+export type Contacts = {
+  email?: string,
   phone?: string,
   address?: string,
-};
+}
 
 export type TimeFrame = {
   dateFrom: string, //TODO should be date
