@@ -50,9 +50,9 @@ const Contacts = ({
   return !hasContacts ? null : (
     <View style={styles.container}>
       <Title>{labels.contacts.title}</Title>
-      <Contact type="Phone" >{phone}</Contact>
-      <Contact type="Email" >{email}</Contact>
-      <Contact type="Address" >{address}</Contact>
+      <Contact type={labels.contacts.phone} >{phone}</Contact>
+      <Contact type={labels.contacts.email} >{email}</Contact>
+      <Contact type={labels.contacts.address} >{address}</Contact>
     </View>
   );
 };

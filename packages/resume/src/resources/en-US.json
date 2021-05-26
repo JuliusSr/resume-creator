@@ -1,9 +1,9 @@
 {
   "contacts": {
     "title": "Contacts",
-    "phone": "phone",
-    "email": "email",
-    "address": "address"
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
   },
   "languages": {
     "title": "Languages"

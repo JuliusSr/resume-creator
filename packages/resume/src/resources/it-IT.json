@@ -1,9 +1,9 @@
 {
   "contacts": {
     "title": "Contatti",
-    "phone": "telefono",
-    "email": "email",
-    "address": "indirizzo"
+    "phone": "Telefono",
+    "email": "Email",
+    "address": "Indirizzo"
   },
   "languages": {
     "title": "Lingue"
