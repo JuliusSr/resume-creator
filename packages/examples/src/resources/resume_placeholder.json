@@ -18,13 +18,22 @@
   "education": [{
     "institute": "Institute Name",
     "degree": "Degree",
-    "dateFrom": "1970-01-01",
-    "dateTo": "1970-01-01"
+    "dateFrom": {
+      "year": 1970,
+      "month": 1
+    },
+    "dateTo": {
+      "year": 1970,
+      "month": 1
+    }
   }],
   "experience": [{
     "company": "Company Name B",
     "position": "Position B",
-    "dateFrom": "1970-01-03",
+    "dateFrom": {
+      "year": 1970,
+      "month": 7
+    },
     "details": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.",
       "In vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
@@ -32,8 +41,14 @@
   }, {
     "company": "Company Name A",
     "position": "Position A",
-    "dateFrom": "1970-01-01",
-    "dateTo": "1970-01-02",
+    "dateFrom": {
+      "year": 1970,
+      "month": 5
+    },
+    "dateTo": {
+      "year": 1970,
+      "month": 6
+    },
     "details": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.",
       "In vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",

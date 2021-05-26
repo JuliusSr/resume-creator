@@ -18,9 +18,16 @@ export type Contacts = {
   address?: Address,
 };
 
+//TODO consider using a union type on numbers 1-12 for month
+//Avoiding for now to avoid deserialization type warnings
+export type Date = {
+  year: number,
+  month?: number
+}
+
 export type TimeFrame = {
-  dateFrom: string, //TODO should be date
-  dateTo?: string  //TODO should be date
+  dateFrom: Date,
+  dateTo?: Date
 };
 
 export interface Education extends TimeFrame {

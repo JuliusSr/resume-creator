@@ -2,8 +2,9 @@ import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { getLabels } from '../utils/i18n';
 import Title from './Title';
-import { Experience as ExperienceData } from '@resume-creator/types';
+import { Date, Experience as ExperienceData } from '@resume-creator/types';
 import List from './List';
+import DateInterval from './DateInterval';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,10 +20,6 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontFamily: 'Lato Bold',
   },
-  date: {
-    fontSize: 11,
-    fontFamily: 'Lato Italic',
-  },
   details: {
     marginTop: 10,
     marginLeft: 1,
@@ -33,8 +30,8 @@ type ExperienceEntryProps = {
   company: string,
   position: string,
   details: Array<string>,
-  dateFrom: string,
-  dateTo?: string
+  dateFrom: Date,
+  dateTo?: Date
 }
 
 const ExperienceEntry = ({
@@ -44,14 +41,11 @@ const ExperienceEntry = ({
   dateFrom,
   dateTo
 }: ExperienceEntryProps) => {
-  const labels = getLabels();
   const title = `${position}  |  ${company}`;
   return (
     <View style={styles.entry}>
       <Text style={styles.title}>{title}</Text>
-      <Text style={styles.date}>
-        {dateFrom} - {dateTo || labels.experience.present}
-      </Text>
+      <DateInterval from={dateFrom} to={dateTo} shortMonth />
       <View style={styles.details}>
         <List items={details} />
       </View>

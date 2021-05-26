@@ -24,7 +24,8 @@ type ResumeLabels = {
   contacts: ContactsLabels,
   languages: LanguageLabels,
   experience: ExperienceLabels,
-  education: EducationLabels
+  education: EducationLabels,
+  months: Array<string>
 };
 
 var currentLocale: Locale = "en-US";
