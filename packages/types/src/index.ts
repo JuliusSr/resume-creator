@@ -28,7 +28,7 @@ export interface Experience extends TimeFrame {
 
 export type Language = {
   name: string,
-  level: number
+  level?: number
 };
 
 export type Resume = {

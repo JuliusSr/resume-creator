@@ -67,7 +67,7 @@ const Resume = (props: ResumeProps) => {
           />
         }
         <Contacts {...personalData?.contacts} />
-        <Languages />
+        <Languages languages={languages} />
       </View>
       <View style={styles.rightColumn} >
         {personalData &&

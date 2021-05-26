@@ -25,7 +25,10 @@
     ]
   }],
   "languages": [{
-    "name": "Language Name",
+    "name": "Language Name 1",
     "level": 100
+  }, {
+    "name": "Language Name 2",
+    "level": 60
   }]
 }
