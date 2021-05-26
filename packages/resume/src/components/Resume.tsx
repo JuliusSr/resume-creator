@@ -76,7 +76,7 @@ const Resume = (props: ResumeProps) => {
         }
         <View style={styles.mainContent}>
           <Experience history={experience} />
-          <Education />
+          <Education history={education} />
         </View>
       </View>
     </View>

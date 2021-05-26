@@ -16,15 +16,22 @@
     }
   },
   "education": [{
-    "institute": "Institute Name",
+    "institute": "Institute Name B",
     "degree": "Degree",
     "dateFrom": {
-      "year": 1970,
-      "month": 1
+      "year": 1968
     },
     "dateTo": {
-      "year": 1970,
-      "month": 1
+      "year": 1969
+    }
+  }, {
+    "institute": "Institute Name A",
+    "degree": "Degree",
+    "dateFrom": {
+      "year": 1966
+    },
+    "dateTo": {
+      "year": 1967
     }
   }],
   "experience": [{
@@ -32,7 +39,7 @@
     "position": "Position B",
     "dateFrom": {
       "year": 1970,
-      "month": 7
+      "month": 3
     },
     "details": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.",
@@ -43,11 +50,11 @@
     "position": "Position A",
     "dateFrom": {
       "year": 1970,
-      "month": 5
+      "month": 1
     },
     "dateTo": {
       "year": 1970,
-      "month": 6
+      "month": 2
     },
     "details": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.",
