@@ -12,6 +12,7 @@
     "title": "Education"
   },
   "experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "present": "Present"
   }
 }

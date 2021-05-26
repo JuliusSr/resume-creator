@@ -38,12 +38,10 @@ const styles = StyleSheet.create({
     width: 430,
     margin: 15,
   },
-  header: {
-    border: 2,
-  },
   mainContent: {
-    marginTop: 15,
+    marginTop: 30,
     fontSize: 12,
+    paddingRight: 30,
   },
 });
 
@@ -77,7 +75,7 @@ const Resume = (props: ResumeProps) => {
           />
         }
         <View style={styles.mainContent}>
-          <Experience />
+          <Experience history={experience} />
           <Education />
         </View>
       </View>

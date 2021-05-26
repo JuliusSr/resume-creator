@@ -13,7 +13,9 @@ interface ContactsLabels extends WithTitle {
 
 interface LanguageLabels extends WithTitle {}
 
-interface ExperienceLabels extends WithTitle {}
+interface ExperienceLabels extends WithTitle {
+  present: string
+}
 
 interface EducationLabels extends WithTitle {}
 
