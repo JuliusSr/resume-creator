@@ -17,6 +17,7 @@ or executing manually each step:
 ```sh
 $ npm run bootstrap
 $ npm run transpile
+$ npm run copy-resources
 ```
 
 If you run in some problems try removing the build artifacts and rebuilding with:
@@ -28,6 +29,7 @@ or executing manually each step:
 $ npm run clean
 $ npm run bootstrap
 $ npm run transpile
+$ npm run copy-resources
 ```
 
 ## Run the example
@@ -41,4 +43,4 @@ While developing you might want to preview the changes as you make them. To avoi
 ```sh
 $ npm run watch
 ```
-While watch is running a transpile command will be executed automagically every time a change is detected in the sources (on save).
+While watch is running a transpile command will be executed automagically every time a change is detected in the sources (on save) and a copy-resource will be executed every time a change is detected in the resources.

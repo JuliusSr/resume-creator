@@ -8,6 +8,8 @@
     "transpile-renderer": "npx lerna run transpile --scope=@resume-creator/renderer",
     "transpile-resume": "npx lerna run transpile --scope=@resume-creator/resume",
     "transpile-types": "npx lerna run transpile --scope=@resume-creator/types",
+    "copy-resources": "lerna run copy-resources",
+    "copy-resources-resume": "lerna run copy-resources --scope=@resume-creator/resume",
     "clean-build": "bash ./scripts/clean-build.sh",
     "build": "bash ./scripts/build.sh",
     "example": "npx lerna run start --stream --scope=@resume-creator/examples",
@@ -29,6 +31,12 @@
     "transpile-types": {
       "patterns": ["packages/types/src"],
       "extensions": "ts",
+      "runOnChangeOnly": true,
+      "quiet": false
+    },
+    "copy-resources-resume": {
+      "patterns": ["packages/resume/src/resources"],
+      "extensions": "json",
       "runOnChangeOnly": true,
       "quiet": false
     }
