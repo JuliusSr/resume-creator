@@ -4,10 +4,18 @@ export type PersonalData = {
   contacts?: Contacts,
 };
 
+export type Address = {
+  city: string,
+  street?: string,
+  number?: string,
+  postalCode?: string,
+  country?: string
+}
+
 export type Contacts = {
   email?: string,
   phone?: string,
-  address?: string,
+  address?: Address,
 };
 
 export type TimeFrame = {

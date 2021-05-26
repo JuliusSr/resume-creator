@@ -3,7 +3,8 @@
     "title": "Contacts",
     "phone": "Phone",
     "email": "Email",
-    "address": "Address"
+    "address": "Address",
+    "city": "City"
   },
   "languages": {
     "title": "Languages"

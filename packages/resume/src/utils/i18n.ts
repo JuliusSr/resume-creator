@@ -8,7 +8,8 @@ interface ContactsLabels extends WithTitle {
   title: string,
   phone: string,
   email: string,
-  address: string
+  address: string,
+  city: string
 };
 
 interface LanguageLabels extends WithTitle {}

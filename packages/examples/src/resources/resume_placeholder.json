@@ -6,7 +6,13 @@
     "contacts": {
       "phone": "+00 1234567890",
       "email": "email@address.com",
-      "address": "Location"
+      "address": {
+        "street": "street",
+        "number": "1",
+        "postalCode": "12345",
+        "city": "City",
+        "country": "Country"
+      }
     }
   },
   "education": [{

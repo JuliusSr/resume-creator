@@ -3,7 +3,8 @@
     "title": "Contatti",
     "phone": "Telefono",
     "email": "Email",
-    "address": "Indirizzo"
+    "address": "Indirizzo",
+    "city": "Città"
   },
   "languages": {
     "title": "Lingue"
