@@ -6,7 +6,6 @@ TS_PREV=$TS_START
 echo "Cleaning..."
 npx lerna clean --yes
 npx rimraf **/node_modules
-npx rimraf **/package-lock.json
 npx rimraf **/build
 TS_CLEAN=$(TZ=UTC date --date now-$TS_PREV +%H:%M:%S)
 TS_PREV=$(date +%s)sec
