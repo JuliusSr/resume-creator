@@ -14,6 +14,7 @@ import Languages from './Languages';
 import Experience from './Experience';
 import Education from './Education';
 import Skills from './Skills';
+import Profile from './Profile';
 
 const styles = StyleSheet.create({
   resume: {
@@ -55,6 +56,7 @@ const Resume = (props: ResumeProps) => {
     experience,
     languages,
     skills,
+    profile,
   } = props;
   return (
     <View style={styles.resume} >
@@ -77,6 +79,7 @@ const Resume = (props: ResumeProps) => {
           />
         }
         <View style={styles.mainContent}>
+          <Profile>{profile}</Profile>
           <Experience history={experience} />
           <Education history={education} />
         </View>

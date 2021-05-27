@@ -80,5 +80,6 @@
   }, {
     "name": "Language Name B",
     "level": 60
-  }]
+  }],
+  "profile": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.\nIn vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 }

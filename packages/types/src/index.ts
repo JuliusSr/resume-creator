@@ -57,7 +57,8 @@ export type Resume = {
   education?: Array<Education>,
   experience?: Array<Experience>,
   languages?: Array<Language>,
-  skills?: Array<Skill>
+  skills?: Array<Skill>,
+  profile?: string
 };
 
 export type Locale = "en-US" | "it-IT";
