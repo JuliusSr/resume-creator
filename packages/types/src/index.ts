@@ -51,6 +51,13 @@ export type Skill = {
   details: Array<string>
 }
 
+export type Reference = {
+  name: string,
+  company: string,
+  email?: string,
+  phone?: string,
+}
+
 export type Resume = {
   picture?: string,
   personalData?: PersonalData,
@@ -58,7 +65,8 @@ export type Resume = {
   experience?: Array<Experience>,
   languages?: Array<Language>,
   skills?: Array<Skill>,
-  profile?: string
+  profile?: string,
+  references?: Array<Reference>,
 };
 
 export type Locale = "en-US" | "it-IT";

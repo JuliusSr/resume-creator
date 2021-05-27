@@ -81,5 +81,16 @@
     "name": "Language Name B",
     "level": 60
   }],
-  "profile": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.\nIn vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  "profile": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.\nIn vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+  "references":[{
+    "name": "Reference Name B",
+    "company": "Company Name B",
+    "email": "reference.a@email.com",
+    "phone": "+00 1234567892"
+  }, {
+    "name": "Reference Name A",
+    "company": "Company Name A",
+    "email": "reference.b@email.com",
+    "phone": "+00 1234567891"
+  }]
 }

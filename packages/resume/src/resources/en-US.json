@@ -22,6 +22,9 @@
   "profile": {
     "title": "Profile"
   },
+  "references": {
+    "title": "References"
+  },
   "months": [
     "January",
     "February",
