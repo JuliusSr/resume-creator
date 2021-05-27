@@ -52,7 +52,7 @@ export type Skill = {
 }
 
 export type Resume = {
-  image?: string,
+  picture?: string,
   personalData?: PersonalData,
   education?: Array<Education>,
   experience?: Array<Experience>,

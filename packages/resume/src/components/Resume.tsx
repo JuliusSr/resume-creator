@@ -1,10 +1,5 @@
 import * as React from 'react';
-import {
-  Font,
-  View,
-  Image,
-  StyleSheet,
-} from '@react-pdf/renderer';
+import { Font, View, StyleSheet } from '@react-pdf/renderer';
 import { Resume as ResumeProps } from '@resume-creator/types';
 import fonts from '../resources/fonts.json';
 import theme from '../resources/theme.json';
@@ -15,6 +10,7 @@ import Experience from './Experience';
 import Education from './Education';
 import Skills from './Skills';
 import Profile from './Profile';
+import Picture from './Picture';
 
 const styles = StyleSheet.create({
   resume: {
@@ -31,10 +27,6 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
     backgroundColor: theme.mainColor,
   },
-  image: {
-    borderRadius: 100,
-    marginBottom: 20
-  },
   rightColumn: {
     flexDirection: "column",
     width: 430,
@@ -50,7 +42,7 @@ fonts.forEach(font => Font.register(font));
 
 const Resume = (props: ResumeProps) => {
   const {
-    image,
+    picture,
     personalData,
     education,
     experience,
@@ -61,12 +53,7 @@ const Resume = (props: ResumeProps) => {
   return (
     <View style={styles.resume} >
       <View style={styles.leftColumn} >
-        {image && 
-          <Image
-            style={styles.image}
-            src={image}
-          />
-        }
+        <Picture src={picture} round />
         <Contacts {...personalData?.contacts} />
         <Skills skills={skills} />
         <Languages languages={languages} />
