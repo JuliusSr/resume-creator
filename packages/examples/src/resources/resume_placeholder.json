@@ -62,6 +62,18 @@
       "Suspendisse feugiat, nisl eget interdum bibendum, purus urna eleifend nibh, vitae tristique nunc tortor sed justo. Morbi posuere nisl mauris, sed efficitur metus tincidunt vitae. Vestibulum mattis in turpis quis eleifend. Donec at erat quam."
     ]
   }],
+  "skills": [{
+    "name": "Skill Name A",
+    "details": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "Ut pretium placerat accumsan"
+    ]
+  }, {
+    "name": "Skill Name B",
+    "details": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    ]
+  }],
   "languages": [{
     "name": "Language Name A",
     "level": 100

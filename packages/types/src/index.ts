@@ -46,12 +46,18 @@ export type Language = {
   level?: number
 };
 
+export type Skill = {
+  name: string,
+  details: Array<string>
+}
+
 export type Resume = {
   image?: string,
   personalData?: PersonalData,
   education?: Array<Education>,
   experience?: Array<Experience>,
-  languages?: Array<Language>
+  languages?: Array<Language>,
+  skills?: Array<Skill>
 };
 
 export type Locale = "en-US" | "it-IT";

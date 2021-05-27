@@ -16,6 +16,9 @@
     "title": "Experience",
     "present": "Present"
   },
+  "skills": {
+    "title": "Skills"
+  },
   "months": [
     "January",
     "February",

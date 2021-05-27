@@ -10,12 +10,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   bullet: {
-    width: 4,
-    height: 4,
-    borderRadius: 100,
-    backgroundColor: "#000000",
+    fontSize: 10,
     marginRight: 5,
-    marginTop: 5
   },
   content: {
     fontSize: 10,
@@ -30,7 +26,7 @@ const Item = ({
   children
 }: ItemProps) => (
   <View style={styles.item}>
-    <View style={styles.bullet} />
+    <Text style={styles.bullet}>•</Text>
     <Text style={styles.content}>{children}</Text>
   </View>
 );

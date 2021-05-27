@@ -13,6 +13,7 @@ import Contacts from './Contacts';
 import Languages from './Languages';
 import Experience from './Experience';
 import Education from './Education';
+import Skills from './Skills';
 
 const styles = StyleSheet.create({
   resume: {
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
   },
   leftColumn: {
     flexDirection: "column",
-    width: 170,
+    width: 185,
     paddingTop: 20,
     paddingRight: 15,
     paddingLeft: 15,
@@ -41,7 +42,6 @@ const styles = StyleSheet.create({
   mainContent: {
     marginTop: 30,
     fontSize: 12,
-    paddingRight: 30,
   },
 });
 
@@ -53,7 +53,8 @@ const Resume = (props: ResumeProps) => {
     personalData,
     education,
     experience,
-    languages
+    languages,
+    skills,
   } = props;
   return (
     <View style={styles.resume} >
@@ -65,6 +66,7 @@ const Resume = (props: ResumeProps) => {
           />
         }
         <Contacts {...personalData?.contacts} />
+        <Skills skills={skills} />
         <Languages languages={languages} />
       </View>
       <View style={styles.rightColumn} >

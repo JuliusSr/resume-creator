@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   details: {
     marginTop: 10,
     marginLeft: 1,
+    marginRight: 30,
   }
 });
 

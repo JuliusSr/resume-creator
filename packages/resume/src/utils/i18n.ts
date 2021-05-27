@@ -20,11 +20,14 @@ interface ExperienceLabels extends WithTitle {
 
 interface EducationLabels extends WithTitle {}
 
+interface SkillsLabels extends WithTitle {}
+
 type ResumeLabels = {
   contacts: ContactsLabels,
   languages: LanguageLabels,
   experience: ExperienceLabels,
   education: EducationLabels,
+  skills: SkillsLabels,
   months: Array<string>
 };
 
