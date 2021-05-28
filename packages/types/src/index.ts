@@ -38,7 +38,7 @@ export interface Education extends TimeFrame {
 export interface Experience extends TimeFrame {
   company: string,
   position: string,
-  details: Array<string>
+  details?: Array<string>
 };
 
 export type Language = {

@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 type ExperienceEntryProps = {
   company: string,
   position: string,
-  details: Array<string>,
+  details?: Array<string>,
   dateFrom: Date,
   dateTo?: Date
 }
@@ -47,9 +47,11 @@ const ExperienceEntry = ({
     <View style={styles.entry}>
       <Text style={styles.title}>{title}</Text>
       <DateInterval from={dateFrom} to={dateTo} shortMonth />
-      <View style={styles.details}>
-        <List items={details} />
-      </View>
+      {details &&
+        <View style={styles.details}>
+          <List items={details} />
+        </View>
+      }
     </View>
   );
 }

@@ -35,15 +35,31 @@
     }
   }],
   "experience": [{
+    "company": "Company Name C",
+    "position": "Position C",
+    "dateFrom": {
+      "year": 1970,
+      "month": 5
+    },
+    "details": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.",
+      "In vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    ]
+  }, {
     "company": "Company Name B",
     "position": "Position B",
     "dateFrom": {
       "year": 1970,
       "month": 3
     },
+    "dateTo": {
+      "year": 1970,
+      "month": 4
+    },
     "details": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.",
-      "In vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+      "In vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      "Suspendisse feugiat, nisl eget interdum bibendum, purus urna eleifend nibh, vitae tristique nunc tortor sed justo. Morbi posuere nisl mauris, sed efficitur metus tincidunt vitae. Vestibulum mattis in turpis quis eleifend. Donec at erat quam."
     ]
   }, {
     "company": "Company Name A",
@@ -55,12 +71,7 @@
     "dateTo": {
       "year": 1970,
       "month": 2
-    },
-    "details": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium placerat accumsan.",
-      "In vel sagittis velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-      "Suspendisse feugiat, nisl eget interdum bibendum, purus urna eleifend nibh, vitae tristique nunc tortor sed justo. Morbi posuere nisl mauris, sed efficitur metus tincidunt vitae. Vestibulum mattis in turpis quis eleifend. Donec at erat quam."
-    ]
+    }
   }],
   "skills": [{
     "name": "Skill Name A",
