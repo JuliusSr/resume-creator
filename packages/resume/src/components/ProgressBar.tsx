@@ -24,7 +24,7 @@ const inRange = (
   lower: number,
   upper: number
 ): number => {
-  if (!value || value < lower) {
+  if (value === undefined || value < lower) {
     return lower;
   } else if (value > upper) {
     return upper;
