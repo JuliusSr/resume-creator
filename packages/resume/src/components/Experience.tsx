@@ -7,21 +7,26 @@ import List from './List';
 import DateInterval from './DateInterval';
 
 const styles = StyleSheet.create({
-  container: {
-    marginBottom: 10
-  },
+  container: {},
   history: {
     flexDirection: "column"
   },
   entry: {
     marginBottom: 10
   },
+  header: {
+    marginBottom: 10,
+  },
   title: {
     fontSize: 11,
     fontFamily: 'Lato Bold',
   },
+  description: {
+    fontSize: 10,
+    marginBottom: 10,
+    marginRight: 20,
+  },
   details: {
-    marginTop: 10,
     marginLeft: 1,
     marginRight: 30,
   }
@@ -30,6 +35,7 @@ const styles = StyleSheet.create({
 type ExperienceEntryProps = {
   company: string,
   position: string,
+  description?: string,
   details?: Array<string>,
   dateFrom: Date,
   dateTo?: Date
@@ -38,6 +44,7 @@ type ExperienceEntryProps = {
 const ExperienceEntry = ({
   company,
   position,
+  description,
   details,
   dateFrom,
   dateTo
@@ -45,8 +52,11 @@ const ExperienceEntry = ({
   const title = `${position}  |  ${company}`;
   return (
     <View style={styles.entry}>
-      <Text style={styles.title}>{title}</Text>
-      <DateInterval from={dateFrom} to={dateTo} shortMonth />
+      <View style={styles.header}>
+        <Text style={styles.title}>{title}</Text>
+        <DateInterval from={dateFrom} to={dateTo} shortMonth />
+      </View>
+      {description && <Text style={styles.description}>{description}</Text>}
       {details &&
         <View style={styles.details}>
           <List items={details} />
@@ -68,10 +78,11 @@ const Experience = ({
     <View style={styles.container}>
       <Title>{labels.experience.title}</Title>
       <View style={styles.history}>
-        {history.map(({ company, position, details, dateFrom, dateTo })=> 
+        {history.map(({ company, position, description, details, dateFrom, dateTo })=> 
           <ExperienceEntry
             company={company}
             position={position}
+            description={description}
             details={details}
             dateFrom={dateFrom}
             dateTo={dateTo}
