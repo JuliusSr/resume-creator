@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   languageName: {
-    marginBottom: 2
+    marginBottom: 3
   }
 });
 
