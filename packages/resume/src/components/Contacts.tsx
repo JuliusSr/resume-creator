@@ -6,7 +6,7 @@ import { Address, Contacts as ContactsProps } from '@resume-creator/types';
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 10,
+    marginBottom: 15,
     fontSize: 10,
   },
   contact: {

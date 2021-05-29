@@ -5,15 +5,17 @@ import Title from './Title';
 import List from './List';
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    marginBottom:5
+  },
   entry: {
-    marginBottom: 10,
+    marginBottom: 5,
     marginRight: 15,
   },
   name: {
     fontFamily: 'Lato Bold',
     fontSize: 11,
-    marginBottom: 10,
+    marginBottom: 8,
   }
 });
 
