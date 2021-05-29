@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Style } from '@react-pdf/types';
 
 const styles = StyleSheet.create({
   container: {
@@ -32,14 +33,16 @@ const Item = ({
 );
 
 type ListProps = {
-  items: Array<string>
+  items: Array<string>,
+  style?: Style
 }
 
 const List = ({
-  items
+  items,
+  style
 }: ListProps) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {...style}]}>
       {items.map(item => <Item>{item}</Item>)}
     </View>
   );

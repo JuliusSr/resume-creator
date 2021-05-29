@@ -133,7 +133,6 @@ const AddressContact = ({
   );
 }
 
-
 interface ContactsProps extends ContactsData {
   icons?: boolean,
   fullAddress?: boolean,

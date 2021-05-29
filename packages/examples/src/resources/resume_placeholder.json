@@ -84,7 +84,11 @@
     "name": "Skill Name B",
     "details": [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    ]
+    ],
+    "level": 80
+  }, {
+    "name": "Skill Name C",
+    "level": 90
   }],
   "languages": [{
     "name": "Language Name A",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from '@react-pdf/renderer';
+import { Style } from '@react-pdf/types';
 import theme from '../resources/theme.json';
 
 const styles = StyleSheet.create({
@@ -16,7 +17,8 @@ const styles = StyleSheet.create({
 });
 
 type ProgressBarProps = {
-  progress?: number
+  progress?: number,
+  style?: Style
 };
 
 const inRange = (
@@ -38,10 +40,11 @@ const getWidth = (progress: number): string => {
 };
 
 const ProgressBar = ({
-  progress
+  progress,
+  style
 }: ProgressBarProps) => {
   return (progress === undefined) ? null : (
-    <View style={styles.container}>
+    <View style={[styles.container, {...style}]}>
       <View style={{ ...styles.progress, width: getWidth(progress) }} />
     </View>
   );

@@ -49,7 +49,8 @@ export type Language = {
 
 export type Skill = {
   name: string,
-  details: Array<string>
+  details?: Array<string>,
+  level?: number
 }
 
 export type Reference = {

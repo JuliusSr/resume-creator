@@ -3,44 +3,57 @@ import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { getLabels } from '../utils/i18n';
 import Title from './Title';
 import List from './List';
+import { Skill } from '@resume-creator/types';
+import ProgressBar from './ProgressBar';
 
 const styles = StyleSheet.create({
   container: {
     marginBottom:5
   },
   entry: {
-    marginBottom: 5,
-    marginRight: 15,
+    marginBottom: 10,
+  },
+  entryNoDetails: {
+    marginBottom: 15,
   },
   name: {
     fontFamily: 'Lato Bold',
     fontSize: 11,
-    marginBottom: 8,
-  }
+  },
+  level: {
+    marginTop: 3
+  },
+  list: {
+    marginTop: 8,
+    marginRight: 15,
+  },
 });
 
 type SkillEntryProps = {
   name: string,
-  skills: Array<string>
+  skills?: Array<string>,
+  level?: number
 }
 
 const SkillEntry = ({ 
   name, 
-  skills 
-}: SkillEntryProps) => (
-  <View style={styles.entry} >
-    <Text style={styles.name}>{name}</Text>
-    <List items={skills} />
-  </View>
-);
-
-type SkillData = {
-  name: string,
-  details: Array<string>
+  skills,
+  level
+}: SkillEntryProps) => {
+  const entryStyle = (skills) 
+    ? styles.entry 
+    : styles.entryNoDetails;
+  return (
+    <View style={entryStyle} >
+      <Text style={styles.name}>{name}</Text>
+      {(level !== undefined) && <ProgressBar style={styles.level} progress={level} />}
+      {skills && <List style={styles.list} items={skills} />}
+    </View>
+  );
 }
 
 type SkillsProps = {
-  skills?: Array<SkillData>
+  skills?: Array<Skill>
 }
 
 const Skills = ({ 
@@ -54,6 +67,7 @@ const Skills = ({
         <SkillEntry
           name={skill.name}
           skills={skill.details}
+          level={skill.level}
         />
       )}
     </View>
