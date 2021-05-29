@@ -6,6 +6,7 @@
     "contacts": {
       "phone": "+00 1234567890",
       "email": "email@address.com",
+      "website": "www.example.com",
       "address": {
         "street": "street",
         "number": "1",

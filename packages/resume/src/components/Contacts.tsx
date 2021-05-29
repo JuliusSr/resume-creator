@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import { getLabels } from '../utils/i18n';
 import Title from './Title';
 import { Address, Contacts as ContactsData } from '@resume-creator/types';
-import { PhoneIcon, EmailIcon, PositionIcon } from './Icons';
+import { PhoneIcon, EmailIcon, WebIcon, PositionIcon } from './Icons';
 
 const styles = StyleSheet.create({
   container: {
@@ -111,6 +111,22 @@ const EmailContact = ({
   );
 }
 
+interface WebContactProps extends InstanceContactProps {
+  website?: string;
+}
+
+const WebContact = ({
+  website,
+  icon,
+}: WebContactProps) => {
+  const labels = getLabels();
+  return !website ? null : (
+    icon 
+    ? <ContactWithIcon icon={WebIcon}>{website}</ContactWithIcon> 
+    : <Contact type={labels.contacts.email}>{website}</Contact>
+  );
+}
+
 interface AddressContactProps extends InstanceContactProps {
   address?: Address;
   full?: boolean
@@ -141,6 +157,7 @@ interface ContactsProps extends ContactsData {
 const Contacts = ({
   phone,
   email,
+  website,
   address,
   icons,
   fullAddress
@@ -152,6 +169,7 @@ const Contacts = ({
       <Title>{labels.contacts.title}</Title>
       <PhoneContact phone={phone} icon={icons} />
       <EmailContact email={email} icon={icons} />
+      <WebContact website={website} icon={icons} />
       <AddressContact address={address} icon={icons} full={fullAddress} />
     </View>
   );

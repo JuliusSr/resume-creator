@@ -3,6 +3,7 @@ import { Image, StyleSheet } from '@react-pdf/renderer';
 import { Style } from '@react-pdf/types';
 import phone from '../resources/icons/phone_icon.png';
 import email from '../resources/icons/email_icon.png';
+import web from '../resources/icons/web_icon.png';
 import position from '../resources/icons/position_icon.png';
 
 const styles = StyleSheet.create({
@@ -40,6 +41,10 @@ const EmailIcon = ({style}:InstanceIconProps) => (
   <Icon src={email} style={style} />
 );
 
+const WebIcon = ({style}:InstanceIconProps) => (
+  <Icon src={web} style={style} />
+);
+
 const PositionIcon = ({style}:InstanceIconProps) => (
   <Icon src={position} style={style} />
 );
@@ -49,5 +54,6 @@ export default Icon;
 export {
   PhoneIcon,
   EmailIcon,
+  WebIcon,
   PositionIcon
 }

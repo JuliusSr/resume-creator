@@ -15,6 +15,7 @@ export type Address = {
 export type Contacts = {
   email?: string,
   phone?: string,
+  website?: string,
   address?: Address,
 };
 
