@@ -3,6 +3,7 @@
     "title": "Contacts",
     "phone": "Phone",
     "email": "Email",
+    "website": "Web",
     "address": "Address",
     "city": "City"
   },

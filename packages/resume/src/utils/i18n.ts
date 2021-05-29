@@ -8,6 +8,7 @@ interface ContactsLabels extends WithTitle {
   title: string,
   phone: string,
   email: string,
+  website: string,
   address: string,
   city: string
 };

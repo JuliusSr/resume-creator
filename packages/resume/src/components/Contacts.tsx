@@ -123,7 +123,7 @@ const WebContact = ({
   return !website ? null : (
     icon 
     ? <ContactWithIcon icon={WebIcon}>{website}</ContactWithIcon> 
-    : <Contact type={labels.contacts.email}>{website}</Contact>
+    : <Contact type={labels.contacts.website}>{website}</Contact>
   );
 }
 
