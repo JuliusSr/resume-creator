@@ -12,7 +12,7 @@
     "copy-resources-resume": "lerna run copy-resources --scope=@resume-creator/resume",
     "clean-build": "bash ./scripts/clean-build.sh",
     "build": "bash ./scripts/build.sh",
-    "example": "npx lerna run start --stream --scope=@resume-creator/examples",
+    "viewer": "npx lerna run start --stream --scope=@resume-creator/viewer-example",
     "watch": "npm-watch"
   },
   "watch": {

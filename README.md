@@ -32,15 +32,18 @@ $ npm run transpile
 $ npm run copy-resources
 ```
 
-## Run the example
-To start a development server with the example run:
+## Examples
+Run the [viewer example](./examples/viewer) from the root with:
 ```sh
-$ npm run example
+$ npm run viewer
 ```
+
+Or if you're just curious to see the end result go to [examples/output](./examples/output)
 
 ## Hot reload
 While developing you might want to preview the changes as you make them. To avoid manually re-transpiling the packages every time you make a change you can run:
 ```sh
 $ npm run watch
 ```
-While watch is running a transpile command will be executed automagically every time a change is detected in the sources (on save) and a copy-resource will be executed every time a change is detected in the resources.
+While watch is running a transpile command will be executed automagically every time a change is detected in the sources (on save).  
+A copy-resource will also be executed every time a change is detected in the resources.
