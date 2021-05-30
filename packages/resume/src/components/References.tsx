@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import Title from './Title';
 import { getLabels } from '../utils/i18n';
 import { Reference as ReferenceData } from '@resume-creator/types';
+import WithSidebar from './WithSidebar';
 
 const styles = StyleSheet.create({
   container: {
@@ -25,31 +26,35 @@ type ReferenceProps = {
   name: string,
   company: string,
   email?: string,
-  phone?: string
+  phone?: string,
+  sidebar?: boolean,
 }
 
 const Reference = ({
   name,
   company,
   email,
-  phone
+  phone,
+  sidebar
 }: ReferenceProps) => {
   const title = `${name}  |  ${company}`;
   return (
-    <View style={styles.reference}>
+    <WithSidebar active={sidebar} style={styles.reference}>
       <Text style={styles.referenceTitle}>{title}</Text>
       <Text style={styles.contact}>{email}</Text>
       <Text style={styles.contact}>{phone}</Text>
-    </View>
+    </WithSidebar>
   );
 }
 
 type ReferencesProps = {
-  references?: Array<ReferenceData>
+  references?: Array<ReferenceData>,
+  sidebar?: boolean,
 }
 
 const References = ({ 
   references, 
+  sidebar
 }: ReferencesProps) => {
   const labels = getLabels();
   return !references ? null : (
@@ -61,6 +66,7 @@ const References = ({
           company={company}
           email={email}
           phone={phone}
+          sidebar={sidebar}
         />  
       )}
     </View>

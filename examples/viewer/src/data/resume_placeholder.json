@@ -37,7 +37,7 @@
   }],
   "experience": [{
     "company": "Company Name C",
-    "position": "Position C",
+    "role": "Position C",
     "dateFrom": {
       "year": 1970,
       "month": 5
@@ -49,7 +49,7 @@
     ]
   }, {
     "company": "Company Name B",
-    "position": "Position B",
+    "role": "Position B",
     "dateFrom": {
       "year": 1970,
       "month": 3
@@ -65,7 +65,7 @@
     ]
   }, {
     "company": "Company Name A",
-    "position": "Position A",
+    "role": "Position A",
     "dateFrom": {
       "year": 1970,
       "month": 1

@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import Title from './Title';
 import { getLabels } from '../utils/i18n';
+import WithSidebar from './WithSidebar';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,17 +15,21 @@ const styles = StyleSheet.create({
 });
 
 type ProfileProps = {
-  children?: ReactNode
+  children?: ReactNode,
+  sidebar?: boolean,
 }
 
 const Profile = ({ 
   children, 
+  sidebar
 }: ProfileProps) => {
   const labels = getLabels();
   return !children ? null : (
     <View style={styles.container}>
       <Title>{labels.profile.title}</Title>
-      <Text style={styles.content}>{children}</Text>
+      <WithSidebar active={sidebar}>
+        <Text style={styles.content}>{children}</Text>
+      </WithSidebar>
     </View>
   );
 }

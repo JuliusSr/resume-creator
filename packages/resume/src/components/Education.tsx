@@ -4,6 +4,7 @@ import { getLabels } from '../utils/i18n';
 import { Date, Education as EducationData } from '@resume-creator/types';
 import Title from './Title';
 import DateInterval from './DateInterval';
+import WithSidebar from './WithSidebar';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,28 +28,32 @@ type EducationEntryProps = {
   institute: string,
   degree: string,
   dateFrom: Date,
-  dateTo?: Date
+  dateTo?: Date,
+  sidebar?: boolean
 }
 
 const EducationEntry = ({
   institute,
   degree,
   dateFrom,
-  dateTo
+  dateTo,
+  sidebar
 }: EducationEntryProps) => (
-  <View style={styles.entry}>
+  <WithSidebar active={sidebar} style={styles.entry}>
     <Text style={styles.institute}>{institute}</Text>
     <Text style={styles.degree}>{degree}</Text>
     <DateInterval from={dateFrom} to={dateTo} shortMonth />
-  </View>
+  </WithSidebar>
 );
 
 type EducationProps = {
-  history?: Array<EducationData>
+  history?: Array<EducationData>,
+  sidebar?: boolean
 }
 
 const Education = ({
-  history
+  history,
+  sidebar
 }: EducationProps) => {
   const labels = getLabels();
   return !history ? null : (
@@ -60,6 +65,7 @@ const Education = ({
           degree={degree}
           dateFrom={dateFrom}
           dateTo={dateTo}
+          sidebar={sidebar}
         />
       )}
     </View>
