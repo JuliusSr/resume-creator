@@ -41,7 +41,8 @@ export interface Experience extends TimeFrame {
   role: string,
   description?: string,
   details?: Array<string>,
-  projects?: Array<Experience>
+  projects?: Array<Experience>,
+  skills?: Array<string>
 };
 
 export type Language = {

@@ -30,6 +30,10 @@ const styles = StyleSheet.create({
   details: {
     marginLeft: 1,
     marginRight: 30,
+    marginBottom: 5,
+  },
+  skills: {
+    fontSize: 10,
   }
 });
 
@@ -41,6 +45,7 @@ type ExperienceEntryProps = {
   dateFrom: Date,
   dateTo?: Date,
   projects?: Array<ExperienceData>,
+  skills?: Array<String>,
   sidebar?: boolean,
 }
 
@@ -52,6 +57,7 @@ const ExperienceEntry = ({
   dateFrom,
   dateTo,
   projects,
+  skills,
   sidebar
 }: ExperienceEntryProps) => {
   const title = `${role}  |  ${company}`;
@@ -61,11 +67,11 @@ const ExperienceEntry = ({
         <Text style={styles.title}>{title}</Text>
         <DateInterval from={dateFrom} to={dateTo} shortMonth />
       </View>
-      {description && <Text style={styles.description}>{description}</Text>}
+      {description && 
+        <Text style={styles.description}>{description}</Text>
+      }
       {details &&
-        <View style={styles.details}>
-          <List items={details} />
-        </View>
+        <List style={styles.details} items={details} />
       }
       {projects && projects.map(project =>
         <ExperienceEntry
@@ -78,6 +84,9 @@ const ExperienceEntry = ({
           sidebar
         />
       )}
+      {skills && skills.length !== 0 && 
+        <Text style={styles.skills} >[ {skills.join("  |  ")} ]</Text>
+      }
     </WithSidebar>
   );
 }
@@ -105,6 +114,7 @@ const Experience = ({
             dateFrom={job.dateFrom}
             dateTo={job.dateTo}
             projects={job.projects}
+            skills={job.skills}
             sidebar={sidebar}
           />
         )}
