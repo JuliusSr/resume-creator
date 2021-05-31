@@ -18,3 +18,6 @@ Here you'll find some samples of generated resumes.
 
 ## [Viewer](./viewer)
 A simple react app that displays a PDF resume.
+
+## [Server](./server)
+A simple fastify server with a couple of REST API that return a generated PDF resume.

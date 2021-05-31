@@ -32,10 +32,15 @@ $ npm run transpile
 $ npm run copy-resources
 ```
 
-## Examples
+## [Examples](./examples)
 Run the [viewer example](./examples/viewer) from the root with:
 ```sh
 $ npm run viewer
+```
+
+Run the [server example](./examples/server) from the root with:
+```sh
+$ npm run server
 ```
 
 Or if you're just curious to see the end result go to [examples/output](./examples/output)

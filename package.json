@@ -13,6 +13,7 @@
     "clean-build": "bash ./scripts/clean-build.sh",
     "build": "bash ./scripts/build.sh",
     "viewer": "npx lerna run start --stream --scope=@resume-creator/viewer-example",
+    "server": "npx lerna run start --stream --scope=@resume-creator/server-example",
     "watch": "npm-watch"
   },
   "watch": {

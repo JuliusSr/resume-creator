@@ -1,0 +1,21 @@
+{
+  "name": "@resume-creator/server-example",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "transpile": "npm run generate-schemas && tsc",
+    "start": "node src/index.js",
+    "generate-schemas": "rimraf src/schemas && typescript-json-schema 'src/types/body.ts' 'ResumeRequest' --required --strictNullChecks -o src/schemas/resume_request.json"
+  },
+  "dependencies": {
+    "fastify": "^3.15.1",
+    "@resume-creator/renderer": "0.0.0",
+    "@resume-creator/types": "0.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "typescript": "^4.2.4",
+    "typescript-json-schema": "^0.50.1"
+  }
+}
