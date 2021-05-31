@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
-import { Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Link, Text, View, StyleSheet } from '@react-pdf/renderer';
 import { getLabels } from '../utils/i18n';
 import Title from './Title';
-import { Address, Contacts as ContactsData } from '@resume-creator/types';
+import { Address, Contacts as ContactsData, LinkContact as LinkData } from '@resume-creator/types';
 import { PhoneIcon, EmailIcon, WebIcon, PositionIcon } from './Icons';
 
 const styles = StyleSheet.create({
@@ -42,7 +42,7 @@ const formatAddress = (
 
 type ContactProps = {
   type: string,
-  children: ReactNode;
+  children: string
 };
 
 const Contact = ({
@@ -57,9 +57,27 @@ const Contact = ({
   );
 }
 
+interface LinkContactProps extends ContactProps {
+  link?: string
+}
+
+const LinkContact = ({
+  type,
+  link,
+  children
+}: LinkContactProps) => {
+  const href = link || children;
+  return !children ? null : (
+    <View style={styles.contact}>
+      <Text style={styles.type}>{type}:</Text>
+      <Link src={href}>{children}</Link>
+    </View>
+  );
+}
+
 type ContactWithIconProps = {
   icon: typeof React.Component | React.FC<any>
-  children: ReactNode;
+  children: string;
 };
 
 const ContactWithIcon = ({
@@ -71,6 +89,25 @@ const ContactWithIcon = ({
     <View style={styles.contactWithIcon}>
       <Icon style={styles.icon} />
       <Text>{children}</Text>
+    </View>
+  );
+}
+
+interface LinkContactWithIconProps extends ContactWithIconProps {
+  link?: string
+}
+
+const LinkContactWithIcon = ({
+  icon,
+  link,
+  children
+}: LinkContactWithIconProps) => {
+  const href = link || children;
+  const Icon = icon;
+  return !children ? null : (
+    <View style={styles.contactWithIcon}>
+      <Icon style={styles.icon} />
+      <Link src={href}>{children}</Link>
     </View>
   );
 }
@@ -104,15 +141,16 @@ const EmailContact = ({
   icon,
 }: EmailContactProps) => {
   const labels = getLabels();
+  const mailto = `mailto:${email}`;
   return !email ? null : (
     icon 
-    ? <ContactWithIcon icon={EmailIcon}>{email}</ContactWithIcon> 
-    : <Contact type={labels.contacts.email}>{email}</Contact>
+    ? <LinkContactWithIcon icon={EmailIcon} link={mailto}>{email}</LinkContactWithIcon> 
+    : <LinkContact type={labels.contacts.email} link={mailto}>{email}</LinkContact>
   );
 }
 
 interface WebContactProps extends InstanceContactProps {
-  website?: string;
+  website?: LinkData;
 }
 
 const WebContact = ({
@@ -120,10 +158,11 @@ const WebContact = ({
   icon,
 }: WebContactProps) => {
   const labels = getLabels();
-  return !website ? null : (
+  const link = website?.link || website?.text
+  return !website?.text ? null : (
     icon 
-    ? <ContactWithIcon icon={WebIcon}>{website}</ContactWithIcon> 
-    : <Contact type={labels.contacts.website}>{website}</Contact>
+    ? <LinkContactWithIcon icon={WebIcon} link={link}>{website.text}</LinkContactWithIcon> 
+    : <LinkContact type={labels.contacts.website} link={link}>{website.text}</LinkContact>
   );
 }
 
@@ -142,7 +181,7 @@ const AddressContact = ({
     ? labels.contacts.address 
     : labels.contacts.city;
   const formattedAddress = formatAddress(address, full);
-  return !address ? null : (
+  return !formattedAddress ? null : (
     icon 
     ? <ContactWithIcon icon={PositionIcon}>{formattedAddress}</ContactWithIcon> 
     : <Contact type={addressLabel}>{formattedAddress}</Contact>

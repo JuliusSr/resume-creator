@@ -12,10 +12,15 @@ export type Address = {
   country?: string
 }
 
+export type LinkContact = {
+  text: string,
+  link?: string
+}
+
 export type Contacts = {
   email?: string,
   phone?: string,
-  website?: string,
+  website?: LinkContact,
   address?: Address,
 };
 
