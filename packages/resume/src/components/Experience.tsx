@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   },
   skills: {
     fontSize: 10,
+    marginRight: 30,
   }
 });
 
@@ -81,11 +82,12 @@ const ExperienceEntry = ({
           details={project.details}
           dateFrom={project.dateFrom}
           dateTo={project.dateTo}
+          skills={project.skills}
           sidebar
         />
       )}
       {skills && skills.length !== 0 && 
-        <Text style={styles.skills} >[ {skills.join("  |  ")} ]</Text>
+        <Text style={styles.skills} >[ {skills.join(" | ")} ]</Text>
       }
     </WithSidebar>
   );
