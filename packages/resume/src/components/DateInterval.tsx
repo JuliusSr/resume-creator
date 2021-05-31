@@ -6,7 +6,8 @@ import { Date } from '@resume-creator/types';
 const styles = StyleSheet.create({
   date: {
     fontSize: 11,
-    fontFamily: 'Lato Italic'
+    fontFamily: 'Lato Italic',
+    color: '#333333'
   },
 });
 
