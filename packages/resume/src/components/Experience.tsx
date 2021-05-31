@@ -6,6 +6,7 @@ import { Date, Experience as ExperienceData } from '@resume-creator/types';
 import List from './List';
 import DateInterval from './DateInterval';
 import WithSidebar from './WithSidebar';
+import BubbleList from './BubbleList';
 
 const styles = StyleSheet.create({
   container: {},
@@ -33,8 +34,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   skills: {
-    fontSize: 10,
-    marginRight: 30,
+    marginRight: 20,
   }
 });
 
@@ -46,7 +46,7 @@ type ExperienceEntryProps = {
   dateFrom: Date,
   dateTo?: Date,
   projects?: Array<ExperienceData>,
-  skills?: Array<String>,
+  skills?: Array<string>,
   sidebar?: boolean,
 }
 
@@ -74,6 +74,7 @@ const ExperienceEntry = ({
       {details &&
         <List style={styles.details} items={details} />
       }
+      {skills && <BubbleList style={styles.skills} items={skills} />}
       {projects && projects.map(project =>
         <ExperienceEntry
           company={project.company}
@@ -86,9 +87,6 @@ const ExperienceEntry = ({
           sidebar
         />
       )}
-      {skills && skills.length !== 0 && 
-        <Text style={styles.skills} >[ {skills.join(" | ")} ]</Text>
-      }
     </WithSidebar>
   );
 }
