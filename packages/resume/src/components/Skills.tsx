@@ -8,13 +8,13 @@ import ProgressBar from './ProgressBar';
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom:5
+    marginBottom:10
   },
   entry: {
-    marginBottom: 10,
+    marginBottom: 5,
   },
   entryNoDetails: {
-    marginBottom: 15,
+    marginBottom: 10,
   },
   name: {
     fontFamily: 'Lato Bold',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     marginTop: 3
   },
   list: {
-    marginTop: 8,
+    marginTop: 5,
     marginRight: 15,
   },
 });
