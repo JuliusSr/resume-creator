@@ -5,10 +5,12 @@ import Title from './Title';
 import List from './List';
 import { Skill } from '@resume-creator/types';
 import ProgressBar from './ProgressBar';
+import BubbleList from './BubbleList';
+import theme from '../resources/theme.json';
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom:10
+    marginBottom: 10
   },
   entry: {
     marginBottom: 5,
@@ -23,31 +25,55 @@ const styles = StyleSheet.create({
   level: {
     marginTop: 3
   },
-  list: {
+  details: {
     marginTop: 5,
     marginRight: 15,
   },
+  points: {
+    marginTop: 5
+  },
+  point: {
+    fontFamily: 'Lato Bold',
+    color: theme.secondaryContrastColor,
+    borderColor: theme.secondaryColor,
+    backgroundColor: theme.secondaryColor,
+  }
 });
 
 type SkillEntryProps = {
   name: string,
-  skills?: Array<string>,
-  level?: number
+  details?: Array<string>,
+  level?: number,
+  points?: Array<string>
 }
 
 const SkillEntry = ({ 
   name, 
-  skills,
-  level
+  details,
+  level,
+  points
 }: SkillEntryProps) => {
-  const entryStyle = (skills) 
+  const entryStyle = (details) 
     ? styles.entry 
     : styles.entryNoDetails;
   return (
     <View style={entryStyle} >
       <Text style={styles.name}>{name}</Text>
-      {(level !== undefined) && <ProgressBar style={styles.level} progress={level} />}
-      {skills && <List style={styles.list} items={skills} />}
+      {(level !== undefined) && 
+        <ProgressBar style={styles.level} progress={level} />
+      }
+      {points && 
+        <BubbleList 
+          style={styles.points} 
+          items={points} 
+          bubbleTheme={{
+            bubbleColor: theme.secondaryColor,
+            textColor: theme.secondaryContrastColor
+          }}
+          solid
+        />
+      }
+      {details && <List style={styles.details} items={details} />}
     </View>
   );
 }
@@ -66,8 +92,9 @@ const Skills = ({
       {skills.map(skill => 
         <SkillEntry
           name={skill.name}
-          skills={skill.details}
+          details={skill.details}
           level={skill.level}
+          points={skill.points}
         />
       )}
     </View>

@@ -15,27 +15,39 @@ const styles = StyleSheet.create({
     paddingBottom: 1,
     border: 1,
     borderRadius: 100,
-    borderColor: "#666666",
-    color: "#333333",
     fontSize: 10
   }
 });
 
+type BubbleTheme = {
+  textColor?: string,
+  bubbleColor?: string
+}
+
 type BubbleListProps = {
   items?: Array<string>,
   style?: Style,
-  itemStyle?: Style
+  bubbleTheme?: BubbleTheme,
+  solid?: boolean
 }
 
 const BubbleList = ({
   items,
   style,
-  itemStyle,
+  bubbleTheme,
+  solid
 }: BubbleListProps) => {
+  const bubbleColor = bubbleTheme?.bubbleColor || "#666666";
+  const textColor = bubbleTheme?.textColor || "#333333";
+  const bubbleColors: Style = {
+    borderColor: bubbleColor,
+    color: textColor,
+    ...(solid ? { backgroundColor: bubbleColor } : {})
+  }
   return (!items || items.length === 0) ? null : (
     <View style={[styles.container, {...style}]}>
       {items.map(item => 
-        <Text style={[styles.bubble, {...itemStyle}]}>
+        <Text style={[styles.bubble, {...bubbleColors}]}>
           {item}
         </Text>
       )}

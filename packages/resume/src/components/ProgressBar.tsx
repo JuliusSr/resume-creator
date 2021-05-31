@@ -5,7 +5,7 @@ import theme from '../resources/theme.json';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#CCCCCC",
+    backgroundColor: theme.secondaryContrastColor,
     height: 5,
     borderRadius: 3
   },

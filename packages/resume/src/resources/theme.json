@@ -1,4 +1,5 @@
 {
   "mainColor": "#85b973",
-  "secondaryColor": "#73594b"
+  "secondaryColor": "#73594b",
+  "secondaryContrastColor": "#CCCCCC"
 }
