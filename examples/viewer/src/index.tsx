@@ -38,7 +38,6 @@ const ViewerPage = () => {
   const [language, setLanguage] = useState("english");
   
   const handleResumeChange = (newResume: ResumeProps) => {
-    console.log("new resume", newResume)
     newResume && setResume(newResume);
   }
 
