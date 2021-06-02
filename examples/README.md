@@ -29,3 +29,6 @@ Run from its folder it with:
 $ npm run create -- -d <path-to-data> [-o <output-dir>] [-n <filename>] [-l <language>]
 ```
 
+## License
+
+MIT © [Giulio Franco Sartor](http://github.com/JuliusSr)

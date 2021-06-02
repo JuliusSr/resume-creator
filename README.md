@@ -57,3 +57,7 @@ $ npm run watch
 ```
 While watch is running a transpile command will be executed automagically every time a change is detected in the sources (on save).  
 A copy-resource will also be executed every time a change is detected in the resources.
+
+## License
+
+MIT © [Giulio Franco Sartor](http://github.com/JuliusSr)
