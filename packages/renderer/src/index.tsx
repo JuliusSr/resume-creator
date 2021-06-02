@@ -36,9 +36,14 @@ const saveResumeToFile = (
   data: ResumeData,
   locale?: Locale
 ) => {
-  ReactPDF.render(
+  const normalizedDirectory = directory.endsWith("/")
+    ? directory.slice(0, -1)
+    : directory;
+  const outputFilePath = `${normalizedDirectory}/${filename}.pdf`
+  
+  return ReactPDF.render(
     <Resume { ...data } locale={locale} />,
-    `${directory}/${filename}.pdf`
+    outputFilePath
   )
 }
 

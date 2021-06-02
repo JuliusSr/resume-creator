@@ -43,6 +43,11 @@ Run the [server example](./examples/server) from the root with:
 $ npm run server
 ```
 
+Run the [cli example](./examples/cli) from the root with:
+```sh
+$ npm run create -- -d <path-to-data> [-o <output-dir>] [-n <filename>] [-l <language>]
+```
+
 Or if you're just curious to see the end result go to [examples/output](./examples/output)
 
 ## Hot reload

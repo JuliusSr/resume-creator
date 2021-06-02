@@ -1,0 +1,19 @@
+{
+  "name": "@resume-creator/cli-example",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "transpile": "tsc",
+    "create": "node src/index.js"
+  },
+  "dependencies": {
+    "@resume-creator/renderer": "0.0.0",
+    "@resume-creator/types": "0.0.0",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "typescript": "^4.2.4"
+  }
+}
