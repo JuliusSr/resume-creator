@@ -1,6 +1,6 @@
 import fastify from 'fastify';
 import { getResumeStream } from '@resume-creator/renderer';
-import placeholdersResume from './data/resume_placeholder.json';
+import placeholdersResume from '@resume-creator/example-data/resume_placeholder.json';
 import { ResumeRequest } from './types/body'
 import resumeRequestSchema from './schemas/resume_request.json';
 

@@ -5,6 +5,7 @@
   "dependencies": {
     "@resume-creator/renderer": "0.0.0",
     "@resume-creator/types": "0.0.0",
+    "@resume-creator/example-data": "0.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "4.0.3"
