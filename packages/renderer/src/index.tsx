@@ -2,21 +2,20 @@ import React from 'react';
 import ReactPDF, { PDFViewer } from '@react-pdf/renderer';
 import Resume from '@resume-creator/resume';
 import { Resume as ResumeData, Locale } from '@resume-creator/types';
+import { Style } from '@react-pdf/types';
 
 type ResumeViewerProps = {
   data: ResumeData
-  locale?: Locale
+  locale?: Locale,
+  style?: Style
 }
 
 const ResumeViewer = ({
   data,
-  locale
+  locale,
+  style
 }: ResumeViewerProps) => (
-  <PDFViewer 
-    style={{ flex: 1 }} 
-    width="100%" 
-    height="1200"
-  >
+  <PDFViewer style={style}>
     <Resume { ...data } locale={locale} />
   </PDFViewer>
 );
