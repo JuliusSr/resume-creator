@@ -89,8 +89,9 @@ const Skills = ({
   return !skills ? null : (
     <View style={styles.container}>
       <Title>{labels.skills.title}</Title>
-      {skills.map(skill => 
+      {skills.map((skill, i) => 
         <SkillEntry
+          key={i}
           name={skill.name}
           details={skill.details}
           level={skill.level}

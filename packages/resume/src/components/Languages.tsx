@@ -46,8 +46,10 @@ const Languages = ({
   return !languages ? null : (
     <View style={styles.container}>
       <Title>{labels.languages.title}</Title>
-      {languages.map(language => 
-        <Language level={language.level}>{language.name}</Language>
+      {languages.map((language, i) => 
+        <Language key={i} level={language.level}>
+          {language.name}
+        </Language>
       )}
     </View>
   );

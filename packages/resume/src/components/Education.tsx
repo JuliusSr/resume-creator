@@ -59,8 +59,9 @@ const Education = ({
   return !history ? null : (
     <View style={styles.container}>
       <Title>{labels.education.title}</Title>
-      {history.map(({ institute, degree, dateFrom, dateTo }) => 
+      {history.map(({ institute, degree, dateFrom, dateTo }, i) => 
         <EducationEntry
+          key={i}
           institute={institute}
           degree={degree}
           dateFrom={dateFrom}

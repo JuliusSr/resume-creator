@@ -75,8 +75,9 @@ const ExperienceEntry = ({
         <List style={styles.details} items={details} />
       }
       {skills && <BubbleList style={styles.skills} items={skills} />}
-      {projects && projects.map(project =>
+      {projects && projects.map((project, i) =>
         <ExperienceEntry
+          key={i}
           company={project.company}
           role={project.role}
           description={project.description}
@@ -105,8 +106,9 @@ const Experience = ({
     <View style={styles.container}>
       <Title>{labels.experience.title}</Title>
       <View style={styles.history}>
-        {history.map(job=> 
+        {history.map((job, i) => 
           <ExperienceEntry
+            key={i}
             company={job.company}
             role={job.role}
             description={job.description}

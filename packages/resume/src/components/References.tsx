@@ -60,8 +60,9 @@ const References = ({
   return !references ? null : (
     <View style={styles.container}>
       <Title>{labels.references.title}</Title>
-      {references.map(({ name, company, email, phone }) => 
+      {references.map(({ name, company, email, phone }, i) => 
         <Reference
+          key={i}
           name={name}
           company={company}
           email={email}

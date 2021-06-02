@@ -43,7 +43,7 @@ const List = ({
 }: ListProps) => {
   return (
     <View style={[styles.container, {...style}]}>
-      {items.map(item => <Item>{item}</Item>)}
+      {items.map((item, i) => <Item key={i}>{item}</Item>)}
     </View>
   );
 }

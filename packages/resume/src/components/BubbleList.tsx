@@ -46,8 +46,8 @@ const BubbleList = ({
   }
   return (!items || items.length === 0) ? null : (
     <View style={[styles.container, {...style}]}>
-      {items.map(item => 
-        <Text style={[styles.bubble, {...bubbleColors}]}>
+      {items.map((item, i) => 
+        <Text key={i} style={[styles.bubble, {...bubbleColors}]}>
           {item}
         </Text>
       )}
