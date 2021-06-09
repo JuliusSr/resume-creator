@@ -3,12 +3,12 @@ import { Resume } from '@resume-creator/types';
 
 type ResumeLoaderProps = {
   onChange: (resume: Resume) => void,
-  style?: React.CSSProperties,
+  className?: string,
 }
 
 const ResumeLoader = ({
   onChange,
-  style
+  className
 }: ResumeLoaderProps) => {
   const reader = new FileReader();
   const inputRef: React.LegacyRef<HTMLInputElement> = useRef(null);
@@ -30,7 +30,7 @@ const ResumeLoader = ({
 
   return (
     <button 
-      style={style}
+      className={className}
       onClick={handleButtonClick}
     >
       Load Resume

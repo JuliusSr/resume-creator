@@ -1,16 +1,15 @@
 import React from 'react';
-import { Locale } from '@resume-creator/types';
 
 type LanguageSelectorProps = {
   languages: Array<string>,
   onChange: (language: string) => void,
-  style?: React.CSSProperties,
+  className?: string
 }
 
 const LanguageSelector = ({
   languages,
   onChange,
-  style
+  className
 }: LanguageSelectorProps) => {
 
   const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -18,7 +17,7 @@ const LanguageSelector = ({
   }
   
   return (
-    <select style={style} onChange={handleLanguageChange}>
+    <select className={className} onChange={handleLanguageChange}>
       {languages.map((lang, i) => 
         <option key={i} value={lang}>{lang}</option>
       )}
