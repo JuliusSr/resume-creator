@@ -14,10 +14,12 @@ const locales: Record<string, Locale> = {
   Italiano: "it-IT"
 }
 
+const defaultResume: ResumeProps = placeholdersResume;
+const defaultLanguage: string = "English";
+
 const ViewerPage = () => {
-  const defaultResume: ResumeProps = placeholdersResume;
   const [resume, setResume] = useState(defaultResume);
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState(defaultLanguage);
   
   const handleResumeChange = (newResume: ResumeProps) => {
     newResume && setResume(newResume);
@@ -43,7 +45,7 @@ const ViewerPage = () => {
       <ResumeViewer 
         style={{ width: "100%", height: 1200 }}
         data={resume}
-        locale={locales[language] }
+        locale={locales[language]}
       />
     </div>
   );
