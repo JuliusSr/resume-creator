@@ -4,7 +4,7 @@
   "private": true,
   "main": "build/index.js",
   "scripts": {
-    "transpile": "babel src -d build --extensions '.ts,.tsx' && tsc"
+    "transpile": "babel src -d build --extensions .ts,.tsx && tsc"
   },
   "dependencies": {
     "@resume-creator/resume": "0.0.0",

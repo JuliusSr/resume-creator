@@ -6,7 +6,7 @@
   "scripts": {
     "transpile": "npm run generate-schemas && tsc",
     "start": "node src/index.js",
-    "generate-schemas": "rimraf src/schemas && typescript-json-schema 'src/types/body.ts' 'ResumeRequest' --required --strictNullChecks -o src/schemas/resume_request.json"
+    "generate-schemas": "rimraf src/schemas && typescript-json-schema src/types/body.ts ResumeRequest --required --strictNullChecks -o src/schemas/resume_request.json"
   },
   "dependencies": {
     "fastify": "^3.15.1",

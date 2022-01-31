@@ -4,8 +4,8 @@
   "private": true,
   "main": "build/index.js",
   "scripts": {
-    "transpile": "babel src -d build --extensions '.ts,.tsx' && tsc",
-    "copy-resources": "copyfiles -u 1 './src/resources/*' build && copyfiles -u 1 './src/resources/icons/*' build"
+    "transpile": "babel src -d build --extensions .ts,.tsx && tsc",
+    "copy-resources": "copyfiles -u 1 ./src/resources/* build && copyfiles -u 1 ./src/resources/icons/* build"
   },
   "dependencies": {
     "@react-pdf/renderer": "^2.0.6",
